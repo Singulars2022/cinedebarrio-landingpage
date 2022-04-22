@@ -212,18 +212,18 @@ background-position: 0 0;
 
 
 #wallpaper {
-  
- position: fixed;
- margin-left: 1%;
- margin-top: 44%;
- height: 4%;
- width: 10%;
- z-index: -1;
+position: fixed;
+text-align: center;
+margin-top: 95vh;
+margin-left: 2vw;
+z-index: -1;
+width: 4%;
+
 }
 #logo-nav{
-  width: 3vw;
   
-  margin-left: -25%;
+  
+  float: left;
 }
 
 
@@ -236,17 +236,24 @@ background-position: 0 0;
   margin: 60px 20px;
   padding: 20px 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out
+  transition: 0.5s ease-in-out;
+  
+  
+  
 }
 
 .container .card:hover {
-  height: 450px
+  height: 550px;
+  transition-duration: 0.5s;
+  
+
+  
 }
 .container .card .imgContainer {
   position: relative;
   width: 250px;
   height: 250px;
-  top: -50px;
+  
   left: 10px;
   z-index: 1;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
@@ -265,16 +272,21 @@ background-position: 0 0;
   color: white;
   visibility: hidden;
   opacity: 0;
-  
-  transition: 0.3s ease-in-out
+
+
 }
 
 .container .card:hover .content {
   visibility: visible;
+  position: relative;
   opacity: 1;
-  margin-top: -40px;
-  transition-delay: 0.3s
+
+  transition-delay: .3s;
+   overflow: hidden;
+  text-overflow:ellipsis;
+  margin: auto;
 }
+
 
 
 
@@ -865,19 +877,50 @@ progress {
 }
 
 @media (min-width: 576px) {
+
   .container-sm, .container {
     max-width: 540px;
+
+  }
+  body #wallpaper{
+    width: 20%;
+  }
+}
+@media (max-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+
+  }
+  #logo-nav{
+width: 8%;
+  }
+  body #wallpaper{
+    width: 20%;
   }
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 720px;
   }
+  #logo-nav{
+width: 8%;
+  }
+  body #wallpaper{
+    width: 20%;
+  }
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
+  body #wallpaper{
+    width: 10%;
+    bottom: 50px;
+  }
+  #logo-nav{
+    width: 4%;
+      }
+  
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
@@ -4252,6 +4295,7 @@ textarea.form-control-lg {
 }
 
 .navbar {
+  
   position: relative;
   display: flex;
   flex-wrap: wrap;
